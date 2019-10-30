@@ -7,7 +7,7 @@ The plan is to make classes for a simulation result, and alter the defualt 'plot
 
 Further we implement functions that by Monte Carlo computes the value of an integral, a function that runs an Acceptance-Rejection procedure.
 
-Lastly we implentet a class 'coplua' and provides a plot function for this, the see the dependence structure between to equal length vectors.
+Lastly we implement a class 'coplua' and provides a plot function for this, to see the dependence structure between to equal length vectors.
 
 ## Made by:
 Anders Højrup (Documentation Executive (DE)) <br>
