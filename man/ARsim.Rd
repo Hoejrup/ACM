@@ -34,6 +34,6 @@ C <- 1.6
 lambda <- 0.5
 f <- function(x) {x*exp(-x)}
 
-ARsimulation <- ARsim(f, lambda, C, 100000)
+ARsimulation <- ARsim(f, C, 100000, rate = lambda)
 
 }
