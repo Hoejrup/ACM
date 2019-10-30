@@ -197,6 +197,9 @@ xlab = "", ylab = "")
 plot(ARsimulation)
 ```
 
-Other interesting methods: print, summary, ...
+Specific print methods:
+
+
+Other interesting methods: summary, ...
 
 
