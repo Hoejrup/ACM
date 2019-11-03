@@ -1,6 +1,6 @@
 #' summary.invsample
 #'
-#' summary method for Monte Carlo integrals
+#' summary method for inverse sampling
 #'
 #' @export
 

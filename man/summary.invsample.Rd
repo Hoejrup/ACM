@@ -7,5 +7,5 @@
 \method{summary}{invsample}(x)
 }
 \description{
-summary method for Monte Carlo integrals
+summary method for inverse sampling
 }
