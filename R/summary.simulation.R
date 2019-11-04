@@ -2,6 +2,10 @@
 #' 
 #' @param x A result vector from a simulation algorithm
 #' 
+#' @return A summary of the input vector, containing mean, variance, relative error and confidence interval
+#' 
+#' @export
+#' 
 summary.simulation <- function(x){
   summary <- vector("list", length = 0)
   summary['Mean'] <- mean(x)
