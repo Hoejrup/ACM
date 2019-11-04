@@ -15,3 +15,8 @@ A summary of the input vector, containing mean, variance, relative error and con
 \description{
 summary.simulation
 }
+\examples{
+x <- MC_pi
+class(x) <- 'simulation'
+summary(x)
+}
