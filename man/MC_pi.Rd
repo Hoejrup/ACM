@@ -3,18 +3,16 @@
 \docType{data}
 \name{MC_pi}
 \alias{MC_pi}
-\title{Indirect dependence for lurkplot}
-\format{A data frame with 1000 rows and 3 variables:
+\title{The result of a Crude Monte Carlo simulation of pi}
+\format{A column vector with 1000000 rows
 
 \describe{
-  \item{my_X}{Linear dependent on Z, with slope 1.2 and intercept 4.3. Further it contains a centered normal error term, with variance 2.4.}
-  \item{my_Y}{Linear dependent on Z, with slope 3.2 and intercept -2.1. Further it contains a centered normal error term, with variance 1.7.}
-  \item{my_Z}{1000 realizations of standard normal.}
+  \item{MC_pi}{Pi simulated with pairs of 2 independet (0,1) uniforms, and the evaluating the ratio that falls in the unit circle}
 }}
 \usage{
 MC_pi
 }
 \description{
-A dataset containig simulated data. X and Y are dependant on each other, by the lurking variable Z.
+A vector containing simulation of pi
 }
 \keyword{datasets}
