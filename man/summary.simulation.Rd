@@ -9,6 +9,9 @@
 \arguments{
 \item{x}{A result vector from a simulation algorithm}
 }
+\value{
+A summary of the input vector, containing mean, variance, relative error and confidence interval
+}
 \description{
 summary.simulation
 }
