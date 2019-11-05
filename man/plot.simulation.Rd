@@ -15,3 +15,9 @@ A plot of the summary of the input vector, containing mean, variance, relative e
 \description{
 plot.simulation
 }
+\examples{
+x <- MC_pi
+class(x) <- 'simulation'
+plot(x)
+
+}

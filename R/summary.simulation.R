@@ -4,6 +4,10 @@
 #' 
 #' @return A summary of the input vector, containing mean, variance, relative error and confidence interval
 #' 
+#' @examples 
+#' x <- MC_pi
+#' class(x) <- 'simulation'
+#' summary(x)
 #' @export
 #' 
 summary.simulation <- function(x){
