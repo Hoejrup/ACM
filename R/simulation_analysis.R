@@ -33,7 +33,7 @@ simulation_analysis <- function(x){
   gridExtra::grid.table(temp_summ, rows = NULL)
   grid::popViewport()
   grid::pushViewport(vp2)
-  grid::grid.draw(ggplotify::as.grob(my_plot))
+  grid::grid.draw(ggplotify::as.grob(temp_plot))
   grid::popViewport()
   grid::pushViewport(vp3)
   grid::grid.text("Simulation analysis")
