@@ -11,9 +11,13 @@
 #' analysis(x)
 #'
 #' @import gridExtra
+#' @import ggplotify
 #' @export
 
 simulation_analysis <- function(x){
+  if(class(x)!='simulation'){
+    stop("Input class is not 'simulation'. Convert input to proper class and try agian.")
+  }
   temp_plot <- plot(x)
   temp_summ <- as.data.frame(summary(x))
   
@@ -29,7 +33,7 @@ simulation_analysis <- function(x){
   gridExtra::grid.table(temp_summ, rows = NULL)
   grid::popViewport()
   grid::pushViewport(vp2)
-  grid::grid.draw(gridExtra::as.grob(my_plot))
+  grid::grid.draw(ggplotify::as.grob(my_plot))
   grid::popViewport()
   grid::pushViewport(vp3)
   grid::grid.text("Simulation analysis")
