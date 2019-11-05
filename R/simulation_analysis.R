@@ -26,7 +26,7 @@ simulation_analysis <- function(x){
                   just = c("left", "bottom"), name = "vp2")
   
   grid::pushViewport(vp1)
-  grid::grid.table(temp_summ, rows = NULL)
+  gridExtra::grid.table(temp_summ, rows = NULL)
   grid::popViewport()
   grid::pushViewport(vp2)
   grid::grid.draw(gridExtra::as.grob(my_plot))
