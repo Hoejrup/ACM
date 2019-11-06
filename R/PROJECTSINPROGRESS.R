@@ -17,5 +17,8 @@
 # This is an example of an object data, with class simulation and subclass copula. It will first look for a method for copula.
 # class(data) <- c("copula", "simulation")
 #
-# Create vignette
+#
+# Anders - Check if user have ggplot2 installed using global option check
+# 
+#
 #
