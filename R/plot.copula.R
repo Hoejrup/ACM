@@ -40,7 +40,9 @@ plot.copula=function(data){
     library(ggplot2)
     data <- data.frame(x = data[,1], y = data[,2])
     ggplot2::ggplot(data=data, ggplot2::aes(xo/n, yo/n)) + 
-      ggplot2::geom_jitter(color = 'Black', size=0.1)
+      ggplot2::geom_jitter(color = 'Black', size=0.1) +
+      ggplot2::xlab("Rank(X)/n") +
+      ggplot2::ylab("Rank(Y)/n")
   }
   else{
   plot(xo/n, yo/n, cex=0.1)

@@ -1,11 +1,19 @@
 ---
 title: "Monte Carlo - Simlation package"
 author: "By Anders Højrup, Markus Legat & Christian Skalborg Jensen"
-date: date()
+date: 'November 2019'
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 ---
+
+
+
+
+
+
+
+
 
