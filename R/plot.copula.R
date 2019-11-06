@@ -33,12 +33,14 @@ plot.copula=function(data){
   xo=rank(data[,1])  
   yo=rank(data[,2])  
   n=length(data[,1])
-  if("ggplot2" %in% rownames(installed.packages())){
+  if("ggplot2" %in% rownames(installed.packages()) == T){
     y <- menu(c("Yes", "No"), title="Do you want to use ggplot for plotting?")
   }
   if(y == 1){
+    library(ggplot2)
     data <- data.frame(x = data[,1], y = data[,2])
-    ggplot2::ggplot(data=data, ggplot2::aes(xo/n, yo/n)) + geom_jitter(color = 'Black', size=0.1)
+    ggplot2::ggplot(data=data, ggplot2::aes(xo/n, yo/n)) + 
+      ggplot2::geom_jitter(color = 'Black', size=0.1)
   }
   else{
   plot(xo/n, yo/n, cex=0.1)
