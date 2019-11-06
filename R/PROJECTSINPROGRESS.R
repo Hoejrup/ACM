@@ -1,3 +1,4 @@
+
 ### 
 # Create 1 or 2 more functions for Copula, look at summary and or print
 # Create general class for "simulations" including all the sub classes
@@ -12,13 +13,10 @@
 # 
 # 
 # 
-# 
-# Remember to consider sub-classes. Can be specified in the following way
-# This is an example of an object data, with class simulation and subclass copula. It will first look for a method for copula.
-# class(data) <- c("copula", "simulation")
+# Create a vignette
 #
 #
-# Anders - Check if user have ggplot2 installed using global option check
-# 
+#
+#
 #
 #

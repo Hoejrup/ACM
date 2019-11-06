@@ -37,7 +37,7 @@ ARsim <- function(f, C, N, exponential = TRUE, rate = 1, propdensity = NA, inver
       }
     }
     structure(list(samples = Y, "number of simulations" = N, "proposal density" = expdensity, 
-                   "target density" = f),class = c("AR", "simulation"))
+                   "target density" = f),class = c("AR"))
   } else{
     sum <- 0
     Y <- rep(0,N)
@@ -51,7 +51,7 @@ ARsim <- function(f, C, N, exponential = TRUE, rate = 1, propdensity = NA, inver
       }
     }
     structure(list(samples = Y, "number of simulations" = N, "proposal density" = propdensity,
-                   "target density" = f),class = c("AR", "simulation"))
+                   "target density" = f),class = c("AR"))
   }
   
 }

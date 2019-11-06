@@ -4,17 +4,21 @@
 #' 
 #' @return A summary of the input vector, containing mean, variance, relative error and confidence interval
 #' 
+#' @examples 
+#' x <- MC_pi
+#' class(x) <- 'simulation'
+#' summary(x)
 #' @export
 #' 
 summary.simulation <- function(x){
   summary <- vector("list", length = 0)
-  summary['Mean'] <- mean(x)
-  summary['Variance'] <- var(x)
-  summary['Relative Error'] <- qnorm(0.975)*sqrt(var(x)/length(x))/mean(x)
+  summary['Mean'] <- round(x = mean(x), digits = 4)
+  summary['Variance'] <- round(x = var(x), digits = 4)
+  summary['Relative Error'] <- round(x = qnorm(0.975)*sqrt(var(x)/length(x))/mean(x), digits = 4)
   summary['Confidence interval'] <- paste("[",
-                                          mean(x)-qnorm(0.975)*var(x)/sqrt(length(x)),
+                                          round(x = mean(x)-qnorm(0.975)*var(x)/sqrt(length(x)), digits = 4),
                                           ";",
-                                          mean(x)+qnorm(0.975)*var(x)/sqrt(length(x)),
+                                          round(x = mean(x)+qnorm(0.975)*var(x)/sqrt(length(x)), digits = 4),
                                           "]")
   print(summary)
 }

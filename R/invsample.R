@@ -22,5 +22,5 @@
 inv_sample <- function(Finv, N = 1, F_distribution = NA){
   U <- runif(N)
   structure(list(samples=Finv(U), "number of simulations"=N, "distribution function" = F_distribution),
-            class = c("invsample", "simulation"))
+            class = c("invsample"))
 }

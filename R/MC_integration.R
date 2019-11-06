@@ -28,6 +28,6 @@ int <- function(f, a, b, n = 10^5){
   confidence_interval <- c(value - halfwidth, value + halfwidth)
   structure(list("integrand" =f, "lower bound" = a, "upper bound" = b, "Value of integral" = value,
                  "asymptotic 95% confidence interval" = confidence_interval, "number of simulations" = n),
-            class = c("MC_integral", "simulation"))
+            class = c("MC_integral"))
   
 } 
