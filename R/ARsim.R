@@ -51,7 +51,7 @@ ARsim <- function(f, C, N, exponential = TRUE, rate = 1, propdensity = NA, inver
       }
     }
     structure(list(samples = Y, "number of simulations" = N, "proposal density" = propdensity,
-                   "target density" = f),class = c("AR", "simulation"))
+                   "target density" = f),class = c("AR"))
   }
   
 }
