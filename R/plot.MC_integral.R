@@ -25,7 +25,9 @@ plot.MC_integral <- function(MC){
     x <- seq(MC$'lower bound',MC$'upper bound', 0.01)
     data <- data.frame(x = x, y = MC$'integrand'(x))
     ggplot2::ggplot(data=data, ggplot2::aes(x, y)) +
-      ggplot2::geom_line() + ggplot2::geom_ribbon(ggplot2::aes(ymin=0, ymax=y),fill = "grey70")
+      ggplot2::geom_line() + 
+      ggplot2::geom_ribbon(ggplot2::aes(ymin=0, ymax=y),fill = "grey70") +
+      ggplot2::ylab("f(x)")
     } else{
     x <- seq(MC$'lower bound',MC$'upper bound', 0.01)
     y <- MC$'integrand'(x)
