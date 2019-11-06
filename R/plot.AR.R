@@ -43,5 +43,6 @@ plot.AR <- function(ARsample){
   lines(x, ARsample$"target density"(x), col = "red")
   plot(density(ARsample$samples), main = "theoretical vs empirical proposal", xlab = "", ylab = "")
   lines(x, ARsample$"target density"(x), col = "red")
+  par(mfrow = c(1,1))
   }
 }
