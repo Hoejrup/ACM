@@ -31,11 +31,69 @@
 
 <h1 class="title toc-ignore">Monte Carlo - Simlation package</h1>
 <h4 class="author"><em>By Anders Højrup, Markus Legat &amp; Christian Skalborg Jensen</em></h4>
-<h4 class="date"><em>date()</em></h4>
+<h4 class="date"><em>November 2019</em></h4>
 
 
 
-
+<div id="functions-included-in-the-package" class="section level1">
+<h1>Functions included in the package</h1>
+<div id="arsim" class="section level2">
+<h2>ARsim( )</h2>
+<p>The function ARsim() draws from the random variable, which is specified by the density f, using acceptance rejection sampling. The default proposal density is the exponential density with rate 1. If you want to use a different density you have to set the argument “exponential” to FALSE and specify your new proposal density and the corresponding inverse distribution function.</p>
+</div>
+<div id="inv_sample" class="section level2">
+<h2>inv_sample( )</h2>
+<p>The function inv_sample() draws from the random variable, which is specified by the distribution F, using inverse sampling.</p>
+</div>
+<div id="int" class="section level2">
+<h2>int( )</h2>
+<p>The function int() performs a Monte Carlo integration of the function f.</p>
+</div>
+<div id="plot.ar" class="section level2">
+<h2>plot.AR( )</h2>
+<p>The function plot.ARs() plots the target vs. the proposal density and the empirical vs. the theoretical density of the samples.</p>
+</div>
+<div id="plot.copula" class="section level2">
+<h2>plot.copula( )</h2>
+<p>plot.copula() plots a 2 dimensional copula, using empirical CDF.</p>
+</div>
+<div id="plot.invsample" class="section level2">
+<h2>plot.invsample( )</h2>
+<p>The function plot.invsample() plots the empirical distribution function of the sampled values</p>
+</div>
+<div id="plot.mc_integral" class="section level2">
+<h2>plot.MC_integral( )</h2>
+<p>The function plot.MC_integral plots the integrand of a corresponding MC integration</p>
+</div>
+<div id="plot.simulation" class="section level2">
+<h2>plot.simulation( )</h2>
+<p>Generates the plot of the mean and confidence interval.</p>
+</div>
+<div id="rbi_norm" class="section level2">
+<h2>rbi_norm( )</h2>
+<p>Generates a bivariate normal distribution</p>
+</div>
+<div id="simulation_analysis" class="section level2">
+<h2>Simulation_analysis( )</h2>
+<p>Creates a simple PDF analysis for a simulation vector. PDF is saved in current working directory</p>
+</div>
+<div id="summary.ar" class="section level2">
+<h2>summary.AR( )</h2>
+<p>Summary method for acceptance rejection sampling</p>
+</div>
+<div id="summary.invsample" class="section level2">
+<h2>summary.invsample( )</h2>
+<p>Summary method for inverse sampling</p>
+</div>
+<div id="summary.mc_integral" class="section level2">
+<h2>summary.MC_integral( )</h2>
+<p>Summary method for Monte Carlo integrals</p>
+</div>
+<div id="summary.simulation" class="section level2">
+<h2>summary.simulation( )</h2>
+<p>Returns a list of mean, variance, relative error and confidence interval.</p>
+</div>
+</div>
 
 
 

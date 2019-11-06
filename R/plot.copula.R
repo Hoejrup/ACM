@@ -34,7 +34,7 @@ plot.copula=function(data){
   yo=rank(data[,2])  
   n=length(data[,1])
   if("ggplot2" %in% rownames(installed.packages()) == T){
-    y <- menu(c("Yes", "No"), title="Do you want to use ggplot for plotting?")
+    y <- menu(c("Yes", "No"), title="You have installed ggplot2. Do you want to use it for plotting?")
   }
   if(y == 1){
     library(ggplot2)

@@ -8,12 +8,48 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 ---
+# Functions included in the package
+## ARsim( )
+The function ARsim() draws from the random variable, which is specified by the density f, using acceptance rejection sampling. 
+The default proposal density is the exponential density with rate 1. If you want to use a different density you have to set the argument "exponential" to FALSE and specify your new proposal density and the corresponding inverse distribution function.
 
+## inv_sample( )
+The function inv_sample() draws from the random variable, which is specified by the distribution F, using inverse sampling. 
 
+## int( )
+The function int() performs a Monte Carlo integration of the function f.
 
+## plot.AR( )
+The function plot.ARs() plots the target vs. the proposal density and the empirical vs. the theoretical density of the samples.
 
+## plot.copula( )
+plot.copula() plots a 2 dimensional copula, using empirical CDF.
 
+## plot.invsample( )
+The function plot.invsample() plots the empirical distribution function of the sampled values
 
+## plot.MC_integral( )
+The function plot.MC_integral plots the integrand of a corresponding MC integration 
 
+## plot.simulation( )
+Generates the plot of the mean and confidence interval.
+
+## rbi_norm( )
+Generates a bivariate normal distribution
+
+## Simulation_analysis( )
+Creates a simple PDF analysis for a simulation vector. PDF is saved in current working directory
+
+## summary.AR( )
+Summary method for acceptance rejection sampling
+
+## summary.invsample( )
+Summary method for inverse sampling
+
+## summary.MC_integral( )
+Summary method for Monte Carlo integrals
+
+## summary.simulation( )
+Returns a list of mean, variance, relative error and confidence interval.
 
 
