@@ -11,7 +11,7 @@
 #' 
 #' @export
 plot.simulation <- function(x){
-  summ <- summary(x)
+  summ <- summary(x, print = F)
   my_mean <- summ$Mean
   my_REL <- summ$`Relative Error`
   lower <- my_mean*(1-my_REL)
