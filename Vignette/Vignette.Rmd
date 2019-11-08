@@ -45,7 +45,25 @@ The function int() performs a Monte Carlo integration of the function f.
 
 
 ## plot.copula( )
-plot.copula() plots a 2 dimensional copula, using empirical CDF.
+The plot.copula() function creates a plot of a 2 dimensional copula, using the empirical CDF. This is done by a rank transformation.
+This is an example of a copula for a 1-Fréchet (inverse Weibull) distribution.
+
+```{r}
+#Example using 1-Fréchet
+N <- 10000
+R <- -1/log(runif(N))
+U <- runif(N)
+X <- R*U
+Y <- R*(1-U)
+data <- matrix(c(X,Y),ncol=2)
+```
+We can set the class of data to be of class copula, then we can use the generic plot function.
+
+```{r}
+class(data) <- 'copula'
+plot(data, ggplot=T)
+```
+
 
 ## plot.invsample( )
 The function plot.invsample() plots the empirical distribution function of the sampled values
@@ -57,7 +75,12 @@ The function plot.MC_integral plots the integrand of a corresponding MC integrat
 Generates the plot of the mean and confidence interval.
 
 ## rbi_norm( )
-Generates a bivariate normal distribution
+The function rbi_norm() generates a bivariate normal distribution. 
+Example
+```{r}
+data <- rbi_norm(N=1000, rho=0.7)
+```
+If unspecified, it will default as rbi_norm(N=10^5, rho, mean=0, var=1).
 
 ## Simulation_analysis( )
 Creates a simple PDF analysis for a simulation vector. PDF is saved in current working directory
