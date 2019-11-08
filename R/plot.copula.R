@@ -40,7 +40,7 @@ plot.copula=function(data, ggplot = FALSE){
       ggplot2::xlab("Rank(X)/n") +
       ggplot2::ylab("Rank(Y)/n")
   } else {
-    if(ggplot == F && "ggplot2" %in% rownames(installed.packages()) == T){
+    if("ggplot2" %in% rownames(installed.packages()) == T){
       y <- menu(c("Yes", "No"), title="You have installed ggplot2. Do you want to use it for plotting?")
       }
     if(y == 1){
