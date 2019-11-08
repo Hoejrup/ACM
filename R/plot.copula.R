@@ -39,18 +39,18 @@ plot.copula=function(data, ggplot = FALSE){
       ggplot2::geom_jitter(color = 'Black', size=0.1) +
       ggplot2::xlab("Rank(X)/n") +
       ggplot2::ylab("Rank(Y)/n")
-  }
-  if(ggplot == F && "ggplot2" %in% rownames(installed.packages()) == T){
-    y <- menu(c("Yes", "No"), title="You have installed ggplot2. Do you want to use it for plotting?")
-  }
-  if(y == 1){
-    data <- data.frame(x = data[,1], y = data[,2])
-    ggplot2::ggplot(data=data, ggplot2::aes(xo/n, yo/n)) + 
-      ggplot2::geom_jitter(color = 'Black', size=0.1) +
-      ggplot2::xlab("Rank(X)/n") +
-      ggplot2::ylab("Rank(Y)/n")
-  }
-  else{
-  plot(xo/n, yo/n, cex=0.1)
+  } else {
+    if(ggplot == F && "ggplot2" %in% rownames(installed.packages()) == T){
+      y <- menu(c("Yes", "No"), title="You have installed ggplot2. Do you want to use it for plotting?")
+      }
+    if(y == 1){
+      data <- data.frame(x = data[,1], y = data[,2])
+      ggplot2::ggplot(data=data, ggplot2::aes(xo/n, yo/n)) + 
+        ggplot2::geom_jitter(color = 'Black', size=0.1) +
+        ggplot2::xlab("Rank(X)/n") +
+        ggplot2::ylab("Rank(Y)/n")
+      } else{
+        plot(xo/n, yo/n, cex=0.1)
+      }
   }
 }
