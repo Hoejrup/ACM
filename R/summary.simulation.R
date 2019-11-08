@@ -24,4 +24,5 @@ summary.simulation <- function(x, print = T){
   if(print == T){
     print(summary)
   }
+  return(summary)
 }
