@@ -4,7 +4,7 @@
 \alias{summary.simulation}
 \title{summary.simulation}
 \usage{
-\method{summary}{simulation}(x)
+\method{summary}{simulation}(x, print = T)
 }
 \arguments{
 \item{x}{A result vector from a simulation algorithm}

@@ -4,10 +4,10 @@
 \alias{plot.invsample}
 \title{plot.invsample}
 \usage{
-\method{plot}{invsample}(inv_sample)
+\method{plot}{invsample}(inv_sample, ggplot = FALSE)
 }
 \arguments{
-\item{inv_sample}{}
+\item{ggplot}{indicates if you want to use ggplot; please note that ggplot has to be installed in this case}
 }
 \value{
 returns a plot of the empirical distribution function

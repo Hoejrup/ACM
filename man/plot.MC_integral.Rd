@@ -4,10 +4,12 @@
 \alias{plot.MC_integral}
 \title{plot.MC_integral}
 \usage{
-\method{plot}{MC_integral}(MC)
+\method{plot}{MC_integral}(MC, ggplot = FALSE)
 }
 \arguments{
 \item{MC}{output of a Monte Carlo integration}
+
+\item{ggplot}{indicates if you want to use ggplot; please note that ggplot has to be installed in this case}
 }
 \value{
 
