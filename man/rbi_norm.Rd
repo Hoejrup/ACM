@@ -4,12 +4,16 @@
 \alias{rbi_norm}
 \title{rbi_norm}
 \usage{
-rbi_norm(N, rho)
+rbi_norm(N = 10^5, rho, mean = 0, var = 1)
 }
 \arguments{
 \item{N}{number of observations}
 
 \item{rho}{correlation efficient}
+
+\item{mean}{is the mean of the normal distribution. If left empty, 0 by default}
+
+\item{var}{is the variance of the normal distribution. If left empty, 1 by default}
 }
 \value{
 a 2 dimensional matrix of a bivariate normal distribution

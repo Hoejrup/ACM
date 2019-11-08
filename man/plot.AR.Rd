@@ -4,10 +4,12 @@
 \alias{plot.AR}
 \title{plot.AR}
 \usage{
-\method{plot}{AR}(ARsample)
+\method{plot}{AR}(ARsample, ggplot = FALSE)
 }
 \arguments{
 \item{ARsample}{samples created by acceptance rejection}
+
+\item{ggplot}{indicates if you want to use ggplot; please note that ggplot has to be installed in this case}
 }
 \description{
 The function plot.ARs() plots the target vs. the proposal density and the empirical vs. the theoretical density of the samples.
