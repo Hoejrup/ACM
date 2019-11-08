@@ -30,7 +30,7 @@ ARsimulation <- ARsim(f, C, 100000, rate = lambda)
 The class of output of `ARsim()` is "AR". We therefore added sepecified methods for plotting and also a summary function.
 
 
-```{r fig3, fig.width = 8, fig.asp = .62}
+```{r, fig.width = 8, fig.asp = .62}
 plot(ARsimulation, ggplot = TRUE)
 summary(ARsimulation)
 ```
@@ -38,7 +38,29 @@ summary(ARsimulation)
 
 
 ## inv_sample( )
+
 The function inv_sample() draws from the random variable, which is specified by the distribution F, using inverse sampling. 
+
+For this purpose, we define the inverse distribution function, we want to sample from. Addtionally, we define the classical distribution function to use some special features of the plot method for objects of the class "invsample".
+
+Lets take a look at an example again:
+```{r}
+Finv <- function(x){-log(1-x)}
+F_dist <- function(x){1-exp(-x)}
+
+inv_samples <- inv_sample(Finv, N = 10000)
+inv_samples_withF <- inv_sample(Finv, N = 10000, F_distribution = F_dist)
+
+summary(inv_samples_withF)
+```
+
+```{r}
+plot(inv_samples, ggplot = TRUE)
+```
+
+```{r, fig.width = 5, fig.asp = .62}
+plot(inv_samples_withF, ggplot = TRUE)
+```
 
 ## int( )
 The function int() performs a Monte Carlo integration of the function f.
