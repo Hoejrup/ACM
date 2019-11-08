@@ -20,7 +20,11 @@ summary.simulation <- function(x, print = T){
                                           ";",
                                           round(x = mean(x)+qnorm(0.975)*var(x)/sqrt(length(x)), digits = 4),
                                           "]")
+<<<<<<< HEAD
   if(print == T){
+=======
+  if(print = T){
+>>>>>>> 8c79dfeb09fb636b72c64d770e8f7111bc3fe977
     print(summary)
   }
 }
