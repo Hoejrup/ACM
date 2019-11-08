@@ -62,9 +62,31 @@ plot(inv_samples, ggplot = TRUE)
 plot(inv_samples_withF, ggplot = TRUE)
 ```
 
+
 ## int( )
+
 The function int() performs a Monte Carlo integration of the function f.
 
+```{r}
+f <- function(x){x^2}
+MCint <- int(f, -2, 2)
+MCint$'Value of integral'
+```
+
+We would like the sampled value to the theoretical one.
+It holds that:
+$$\int_{-2}^{2}f(x)dx = \int_{-2}^{2}x^2dx = \left[\frac{x^3}{3}\right]^{x=2}_{x=-2} = 2\frac{8}{3} $$
+
+```{r}
+(theoretical_value <- 16/3)
+```
+
+Calling the plot and the summary method yields:
+
+```{r}
+summary(MCint)
+plot(MCint, ggplot = TRUE)
+```
 
 ## plot.copula( )
 The plot.copula() function creates a plot of a 2 dimensional copula, using the empirical CDF. This is done by a rank transformation.
@@ -87,12 +109,6 @@ plot(data, ggplot=T)
 ```
 
 
-## plot.invsample( )
-The function plot.invsample() plots the empirical distribution function of the sampled values
-
-## plot.MC_integral( )
-The function plot.MC_integral plots the integrand of a corresponding MC integration 
-
 ## plot.simulation( )
 Generates the plot of the mean and confidence interval.
 
@@ -107,11 +123,6 @@ If unspecified, it will default as rbi_norm(N=10^5, rho, mean=0, var=1).
 ## Simulation_analysis( )
 Creates a simple PDF analysis for a simulation vector. PDF is saved in current working directory
 
-## summary.invsample( )
-Summary method for inverse sampling
-
-## summary.MC_integral( )
-Summary method for Monte Carlo integrals
 
 ## summary.simulation( )
 Returns a list of mean, variance, relative error and confidence interval.
