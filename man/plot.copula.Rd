@@ -18,7 +18,7 @@ plot.copula plots a 2 dimensional copula, using empirical CDF.
 \examples{
 #Example using bivariate normal
 N <- 1000
-data <- rmult_norm(10000,rho=0.7)
+data <- rbi_norm(10000,rho=0.7)
 class(data) <- 'copula'
 plot(data)
 
