@@ -19,7 +19,22 @@
 #' 
 #' @export
 
-plot.invsample <- function(inv_sample){
+plot.invsample <- function(inv_sample, ggplot = FALSE){
+  if(ggplot == TRUE){
+    if(is.function(inv_sample$"distribution function")) {
+      y <- data.frame(y = inv_sample$samples)
+      ggplot2::ggplot(y) + 
+        ggplot2::stat_ecdf(ggplot2::aes(y, colour = "ecdf")) + 
+        ggplot2::stat_function(fun = inv_sample$"distribution function", ggplot2::aes(colour = "theoretical distribution")) + 
+        ggplot2::scale_colour_manual("", values = c("ecdf" ="green", "theoretical distribution"="red")) +
+        ggplot2::labs(x = "x", y = "ecdf vs. theoretical")
+    } else {
+      y <- data.frame(y = inv_sample$samples)
+      ggplot2::ggplot(y) + 
+        ggplot2::stat_ecdf(ggplot2::aes(x = y)) +
+        ggplot2::labs(x = "x", y = "ecdf")
+    }
+  } else{
   if(inv_sample$"number of simulations" < 10){
     warning("number of simulations is to small")
   } else{
@@ -51,6 +66,7 @@ plot.invsample <- function(inv_sample){
       y <- inv_sample$samples
       plot(ecdf(y), main = "Empirical cumulative distribution function")
     }
+  }
   }
   }
 }
