@@ -10,7 +10,7 @@
 #' summary(x)
 #' @export
 #' 
-summary.simulation <- function(x){
+summary.simulation <- function(x, print = T){
   summary <- vector("list", length = 0)
   summary['Mean'] <- round(x = mean(x), digits = 4)
   summary['Variance'] <- round(x = var(x), digits = 4)
@@ -20,5 +20,7 @@ summary.simulation <- function(x){
                                           ";",
                                           round(x = mean(x)+qnorm(0.975)*var(x)/sqrt(length(x)), digits = 4),
                                           "]")
-  print(summary)
+  if(print == T){
+    print(summary)
+  }
 }
