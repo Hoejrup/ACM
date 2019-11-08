@@ -4,6 +4,7 @@
 #' 
 #'
 #' @param inv_sample
+#' @param ggplot indicates if you want to use ggplot; please note that ggplot has to be installed in this case
 #' 
 #' @return returns a plot of the empirical distribution function
 #' 

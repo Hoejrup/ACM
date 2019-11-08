@@ -4,6 +4,7 @@
 #'
 #'
 #' @param MC output of a Monte Carlo integration
+#' @param ggplot indicates if you want to use ggplot; please note that ggplot has to be installed in this case
 #'
 #'
 #' @return 
