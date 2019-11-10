@@ -29,9 +29,8 @@ plot.simulation <- function(x, ggplot = FALSE){
       ggplot2::geom_point() + 
       ggplot2::theme_classic() +
       ggplot2::theme(legend.position = "none",
-                     axis.title.x=element_blank(),
-                     axis.text.x=element_blank(),
-                     axis.ticks.x=element_blank()) + 
+                     axis.text.x=ggplot2::element_blank(),
+                     axis.ticks.x=ggplot2::element_blank()) + 
       ggplot2::ylab('Value') +
       ggplot2::xlab("Simulation") 
   }else{
@@ -50,9 +49,8 @@ plot.simulation <- function(x, ggplot = FALSE){
         ggplot2::geom_point() + 
         ggplot2::theme_classic() +
         ggplot2::theme(legend.position = "none",
-                       axis.title.x=element_blank(),
-                       axis.text.x=element_blank(),
-                       axis.ticks.x=element_blank()) + 
+                       axis.text.x=ggplot2::element_blank(),
+                       axis.ticks.x=ggplot2::element_blank()) + 
         ggplot2::ylab('Value') +
         ggplot2::xlab("Simulation")
     } else{
