@@ -13,6 +13,6 @@
 MC_pi
 }
 \description{
-A vector containing simulation of pi
+A vector containing simulation of pi, of the class 'simulation'. Being of 'simulation' class, plot() and summary() functions on the object is altered.
 }
 \keyword{datasets}

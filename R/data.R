@@ -1,6 +1,6 @@
 #' The result of a Crude Monte Carlo simulation of pi
 #'
-#' A vector containing simulation of pi
+#' A vector containing simulation of pi, of the class 'simulation'. Being of 'simulation' class, plot() and summary() functions on the object is altered.
 #'
 #' @format A column vector with 1000000 rows
 #'
