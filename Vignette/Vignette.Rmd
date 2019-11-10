@@ -111,6 +111,11 @@ plot(data, ggplot=T)
 
 ## plot.simulation( )
 Generates the plot of the mean and confidence interval.
+```{r}
+x <- MC_pi
+class(x) <- 'simulation'
+plot(x, ggplot = T)
+```
 
 ## rbi_norm( )
 The function rbi_norm() generates a bivariate normal distribution. 
