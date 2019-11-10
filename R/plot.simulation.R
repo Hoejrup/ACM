@@ -28,9 +28,12 @@ plot.simulation <- function(x, ggplot = FALSE){
     ggplot2::ggplot(data = y, ggplot2::aes(x = ones, y = values, color = is_mean)) +
       ggplot2::geom_point() + 
       ggplot2::theme_classic() +
-      ggplot2::theme(legend.position = "none") + 
+      ggplot2::theme(legend.position = "none",
+                     axis.title.x=element_blank(),
+                     axis.text.x=element_blank(),
+                     axis.ticks.x=element_blank()) + 
       ggplot2::ylab('Value') +
-      ggplot2::xlab("Simulation")
+      ggplot2::xlab("Simulation") 
   }else{
     ans <- 0
     if("ggplot2" %in% rownames(installed.packages()) && "gridExtra" %in% rownames(installed.packages())){
@@ -46,11 +49,14 @@ plot.simulation <- function(x, ggplot = FALSE){
       ggplot2::ggplot(data = y, ggplot2::aes(x = ones, y = values, color = is_mean)) +
         ggplot2::geom_point() + 
         ggplot2::theme_classic() +
-        ggplot2::theme(legend.position = "none") + 
+        ggplot2::theme(legend.position = "none",
+                       axis.title.x=element_blank(),
+                       axis.text.x=element_blank(),
+                       axis.ticks.x=element_blank()) + 
         ggplot2::ylab('Value') +
         ggplot2::xlab("Simulation")
     } else{
-      plot(1, my_mean, ylim = c(lower*(1-my_REL), upper*(1+my_REL)))
+      plot(1, my_mean, ylim = c(lower*(1-my_REL), upper*(1+my_REL)), xaxt = 'n')
       points(c(1,1), c(lower,upper), col = 'blue')
     }
   }
