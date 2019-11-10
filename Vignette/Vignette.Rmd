@@ -126,5 +126,10 @@ Creates a simple PDF analysis for a simulation vector. PDF is saved in current w
 
 ## summary.simulation( )
 Returns a list of mean, variance, relative error and confidence interval.
+```{r}
+x <- MC_pi
+class(x) <- 'simulation'
+summary(x, print = F)
+```
 
 
