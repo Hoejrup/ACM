@@ -4,10 +4,12 @@
 \alias{plot.simulation}
 \title{plot.simulation}
 \usage{
-\method{plot}{simulation}(x)
+\method{plot}{simulation}(x, ggplot = FALSE)
 }
 \arguments{
 \item{x}{A result vector from a simulation algorithm}
+
+\item{ggplot}{A boolean variable, determining if to use ggplot, directly from function call, rather than using control input}
 }
 \value{
 A plot of the summary of the input vector, containing mean, variance, relative error and confidence interval
