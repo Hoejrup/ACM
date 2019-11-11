@@ -15,7 +15,6 @@ Creates a simple PDF analysis for a simulation vector. PDF is saved in current w
 \examples{
 
 x <- MC_pi
-class(x) <- 'simulation'
 analysis(x)
 
 }

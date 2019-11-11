@@ -7,7 +7,6 @@
 #' @examples
 #'
 #' x <- MC_pi
-#' class(x) <- 'simulation'
 #' analysis(x)
 #'
 #' @import gridExtra
