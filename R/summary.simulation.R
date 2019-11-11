@@ -6,7 +6,6 @@
 #' 
 #' @examples 
 #' x <- MC_pi
-#' class(x) <- 'simulation'
 #' summary(x)
 #' @export
 #' 
