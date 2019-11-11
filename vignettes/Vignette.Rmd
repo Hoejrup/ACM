@@ -113,7 +113,6 @@ plot(data, ggplot=T)
 Generates the plot of the mean and confidence interval.
 ```{r}
 x <- MC_pi
-class(x) <- 'simulation'
 plot(x, ggplot = T)
 ```
 
@@ -126,15 +125,12 @@ data <- rbi_norm(N=1000, rho=0.7)
 If unspecified, it will default as rbi_norm(N=10^5, rho, mean=0, var=1).
 
 ## Simulation_analysis( )
-Creates a simple PDF analysis for a simulation vector. PDF is saved in current working directory
+Creates a simple PDF analysis by combining plot and summary for a simulation vector. PDF is saved in current working directory
 
 
 ## summary.simulation( )
 Returns a list of mean, variance, relative error and confidence interval.
 ```{r}
 x <- MC_pi
-class(x) <- 'simulation'
 summary(x, print = F)
 ```
-
-
