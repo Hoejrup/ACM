@@ -1,6 +1,7 @@
 #' Simulation analysis
 #'
-#' Creates a simple PDF analysis for a simulation vector. PDF is saved in current working directory
+#' Creates a simple PDF analysis for a simulation vector. 
+#' PDF is saved in current working directory
 #'
 #' @param x A simulation vector
 #'
