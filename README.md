@@ -1,5 +1,10 @@
 # ACM_MonteCarlo_2019
 
+## Installation
+
+`devtools::install_github("aumath-advancedr2019/ACM_2019", build_vignettes = TRUE, dependencies = T)`
+
+
 ## The purpose of the package
 The purpose of this package, is to provide useful functions for Monte Carlo simulations and general probabilty theory.
 
