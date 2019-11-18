@@ -10,11 +10,12 @@ simulation_analysis(x)
 \item{x}{A simulation vector}
 }
 \description{
-Creates a simple PDF analysis for a simulation vector. PDF is saved in current working directory
+Creates a simple PDF analysis for a simulation vector. 
+PDF is saved in current working directory
 }
 \examples{
 
 x <- MC_pi
-analysis(x)
+simulation_analysis(x)
 
 }
